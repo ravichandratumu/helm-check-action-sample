@@ -17,7 +17,7 @@ spec:
         app: {{ template "dry-run-sample.name" . }}
         release: {{ .Release.Name }}
     spec:
-     
+      containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
