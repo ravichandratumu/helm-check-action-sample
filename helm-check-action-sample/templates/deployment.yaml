@@ -2,7 +2,7 @@ apiVersion: app/v1
 kind: Deployment
 metadata:
   name: {{ template "dry-run-sample.fullname" . }}
-  labels:
+  
     app: {{ template "dry-run-sample.name" . }}
     chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
     release: {{ .Release.Name }}
