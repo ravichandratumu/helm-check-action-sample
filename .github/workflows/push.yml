@@ -1,11 +1,11 @@
 on: push
 name: Main
 jobs:
-  helm-check:
+  ci:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: helm-check
+    - id: validate
       uses: igabaydulin/helm-check-action@0.1.4
       env:
-        CHART_LOCATION: ./helm-check-action-sample
+        chartPath: ./helm-check-action-sample
