@@ -8,4 +8,4 @@ jobs:
     - id: validate
       uses: igabaydulin/helm-check-action@0.1.4
       env:
-        chartPath: ./helm-check-action-sample
+        CHART_LOCATION: ./helm-check-action-sample
